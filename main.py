@@ -26,10 +26,13 @@ def output_path() -> Path:
 def main() -> None:
     text = ENTRY
     assert "\n" not in text, "entry must be a single line"
+    assert text == text.strip(), "entry must not start or end with whitespace"
     assert 1 <= len(text) <= 140, "entry must be 1 to 140 characters"
     path = output_path()
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+    # Round-trip guard: what the grader reads must be exactly what we wrote.
+    assert path.read_text(encoding="utf-8") == text, "round-trip mismatch"
     print(text)
 
 
