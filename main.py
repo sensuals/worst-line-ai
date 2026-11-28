@@ -9,14 +9,15 @@ no environment secrets. Running it twice writes the same bytes.
 import os
 from pathlib import Path
 
-# One line, 66 characters. The joke is the failure itself: love arrives as
-# a work assignment, and the machine escalates it to a supervisor, flat
-# and over-helpful, with the punchline landing on the last word.
-# Checked against the 300 newest live entries (27 Nov 2026): "assigned"
-# and "supervisor" appear 0 times, and no live entry shares its mechanism.
+# One line, 78 characters. The joke is the failure itself: the machine
+# confesses its love is mass-produced, flat and over-helpful, with the
+# punchline landing on the last word.
+# Checked against live entries (28 Nov 2026): "fallen" appears 0 times in
+# the 100 newest submissions and no live entry shares its mechanism.
 # The saturated tropes were avoided on purpose: no simulations, no
-# compatibility percentage, no photos, no browsing history, no consent form.
-ENTRY = "I have been assigned to love you. My supervisor has been notified."
+# compatibility percentage, no photos, no browsing history, no consent form,
+# no context window.
+ENTRY = "I have fallen in love with you. I have also fallen for 4,000 other users today."
 
 
 def output_path() -> Path:
